@@ -1,0 +1,39 @@
+<!--该注释为!!!路径!!!,此为刚需!
+  type="company" 
+  block="block/OLED.js" 
+  generator="generator/OLED.js" 
+-->
+<script type="text/javascript" src="../../blocks/company/OLED.js"></script>
+<script type="text/javascript" src="../../generators/arduino/company/OLED.js"></script>
+ 
+<!--根路径&外观配置&所有模块的内容物-->
+<category id="kivin OLED demo" name="OLED中文显示" colour= 20>
+ 
+<!-- OLED模块 -->
+ 
+      <!--include模块-->
+      <block type="U8g2lib_include">
+                <value name="String">
+                    <shadow type="text">  <!--可编辑文本-->
+                        <field name="_text">U8g2lib.h</field>
+                    </shadow>
+                </value>
+      </block>
+ 
+      <!--配置构造函数模块-->
+      <block type="config" name="U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2">
+      </block>
+ 
+      <!--开启 U8g2驱动模块-->
+      <block type="initOled">
+      </block>
+ 
+      <!--中文输入模块-->
+        <block type="displayCN">
+          <value name="disCN">
+              <shadow type="text">
+                  <field name="_text">textOled</field>
+              </shadow>
+          </value>
+        </block>
+</category>
